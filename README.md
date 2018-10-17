@@ -44,10 +44,10 @@ module.exports = {
   plugins: [
     new VueAutoRoutingPlugin({
       // Path to the directory that contains your multi pages and page components.
-      pages: 'src/pages',
+      pages: 'src/modules',
 
-      // A string that will be added to importing component path (default @/pages/).
-      importPrefix: '@/pages/'
+      // A string that will be added to importing component path (default src/modules/).
+      importPrefix: 'src/modules/'
     })
   ]
 }
