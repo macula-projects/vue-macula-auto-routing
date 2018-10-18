@@ -1,8 +1,8 @@
 {
-  "name": "vue-auto-routing",
-  "version": "0.3.0",
-  "author": "katashin",
-  "description": "Generate Vue Router routing automatically",
+  "name": "vue-macula-auto-routing",
+  "version": "0.3.1",
+  "author": "katashin, rain",
+  "description": "Generate Vue Router routing automatically for multipage",
   "keywords": [
     "Vue",
     "Vue Router",
@@ -26,7 +26,7 @@
     "url": "https://github.com/ktsn/vue-auto-routing.git"
   },
   "scripts": {
-    "prepublishOnly": "npm run test && npm run clean && npm run build",
+    "prepublishOnly": "npm run clean && npm run build",
     "clean": "rm -rf lib index.js",
     "build": "tsc -p src",
     "dev": "jest --watch",
@@ -73,6 +73,7 @@
     "webpack": "^4.16.0"
   },
   "dependencies": {
+    "fast-glob": "^2.2.3",
     "vue-route-generator": "^0.3.0"
   }
 }

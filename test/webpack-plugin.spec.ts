@@ -28,12 +28,12 @@ const matchOutputWithSnapshot = () => {
 }
 
 const addPage = (p: string) => {
-  const to = resolve(path.join('fixtures/pages', p))
+  const to = resolve(path.join('fixtures/modules', p))
   fse.outputFileSync(to, '')
 }
 
 const removePage = (p: string) => {
-  const to = resolve(path.join('fixtures/pages', p))
+  const to = resolve(path.join('fixtures/modules', p))
   fse.unlinkSync(to)
 }
 
@@ -42,15 +42,18 @@ describe('webpack plugin', () => {
     fse.removeSync(resolve('../index.js'))
 
     // reset pages
-    fse.removeSync(resolve('fixtures/pages'))
-    addPage('index.vue')
-    addPage('users/foo.vue')
-    addPage('users/_id.vue')
+    fse.removeSync(resolve('fixtures/modules'))
+    addPage('demo1/index.vue')
+    addPage('demo1/users/foo.vue')
+    addPage('demo1/users/_id.vue')
+    addPage('demo2/index.vue')
+    addPage('demo2/users/foo.vue')
+    addPage('demo2/users/_id.vue')
   })
 
   it('imports dynamically created routes', done => {
     const plugin = new Plugin({
-      pages: resolve('fixtures/pages')
+      pages: resolve('fixtures/modules')
     })
 
     compiler(plugin).run(() => {
@@ -61,7 +64,7 @@ describe('webpack plugin', () => {
 
   it('watches adding a page', done => {
     const plugin = new Plugin({
-      pages: resolve('fixtures/pages')
+      pages: resolve('fixtures/modules')
     })
 
     let count = 0
@@ -69,7 +72,7 @@ describe('webpack plugin', () => {
       count++
       switch (count) {
         case 1:
-          addPage('users.vue')
+          addPage('demo1/users.vue')
           break
         default:
           matchOutputWithSnapshot()
@@ -80,7 +83,7 @@ describe('webpack plugin', () => {
 
   it('watches removing a page', done => {
     const plugin = new Plugin({
-      pages: resolve('fixtures/pages')
+      pages: resolve('fixtures/modules')
     })
 
     let count = 0
@@ -88,7 +91,7 @@ describe('webpack plugin', () => {
       count++
       switch (count) {
         case 1:
-          removePage('users/foo.vue')
+          removePage('demo1/users/foo.vue')
           break
         default:
           matchOutputWithSnapshot()
@@ -101,7 +104,7 @@ describe('webpack plugin', () => {
     'does not fire compilation when the route does not changed',
     done => {
       const plugin = new Plugin({
-        pages: resolve('fixtures/pages')
+        pages: resolve('fixtures/modules')
       })
 
       let count = 0
