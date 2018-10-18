@@ -57,7 +57,7 @@ module.exports = {
 
 * [vue-cli-plugin-macula-auto-routing](https://github.com/macula-projects/vue-cli-plugin-macula-auto-routing): Vue CLI plugin including auto multi pages and layouts resolution.
 * [vue-router-layout](https://github.com/ktsn/vue-router-layout): Lightweight layout resolver for Vue Router.
-* [vue-route-generator](https://github.com/ktsn/vue-route-generator): Low-level utility generating routing which vue-auto-routing using under the hood.
+* [vue-route-generator](https://github.com/ktsn/vue-route-generator): Low-level utility generating routing which vue-macula-auto-routing using under the hood.
 
 ## License
 

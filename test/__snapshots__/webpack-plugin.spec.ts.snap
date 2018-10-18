@@ -207,7 +207,7 @@ exports[`webpack plugin imports dynamically created routes 1`] = `
 \\"use strict\\";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
- // vue-auto-routing
+ // vue-macula-auto-routing
 console.log(___WEBPACK_IMPORTED_MODULE_0__[\\"default\\"])
 
 
@@ -453,7 +453,7 @@ exports[`webpack plugin watches adding a page 1`] = `
 \\"use strict\\";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
- // vue-auto-routing
+ // vue-macula-auto-routing
 console.log(___WEBPACK_IMPORTED_MODULE_0__[\\"default\\"])
 
 
@@ -707,7 +707,7 @@ exports[`webpack plugin watches removing a page 1`] = `
 \\"use strict\\";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
- // vue-auto-routing
+ // vue-macula-auto-routing
 console.log(___WEBPACK_IMPORTED_MODULE_0__[\\"default\\"])
 
 

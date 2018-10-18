@@ -19,11 +19,11 @@
     "lib",
     "index.d.ts"
   ],
-  "homepage": "https://github.com/ktsn/vue-auto-routing",
-  "bugs": "https://github.com/ktsn/vue-auto-routing/issues",
+  "homepage": "https://github.com/macula-projects/vue-macula-auto-routing",
+  "bugs": "https://github.com/macula-projects/vue-macula-auto-routing/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ktsn/vue-auto-routing.git"
+    "url": "https://github.com/macula-projects/vue-macula-auto-routing.git"
   },
   "scripts": {
     "prepublishOnly": "npm run clean && npm run build",
