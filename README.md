@@ -12,7 +12,7 @@ $ npm install -D vue-macula-auto-routing
 
 ## Usage
 
-vue-macula-auto-routing resolves Vue Router routing automatically by using [vue-route-generator](https://github.com/ktsn/vue-route-generator). The routes are generated with the same rules with [Nuxt routing](https://nuxtjs.org/guide/routing).
+vue-macula-auto-routing resolves Vue Router routing automatically by using [vue-macula-auto-routing](https://github.com/macula-projects/vue-macula-auto-routing). The routes are generated with the same rules with [Nuxt routing](https://nuxtjs.org/guide/routing).
 
 To use this, you import `vue-macula-auto-routing` and pass it into Vue Router constructor options.
 
@@ -31,7 +31,7 @@ export default new Router({
 })
 ```
 
-You also need to add a webpack plugin vue-macula-auto-routing provides. The plugin options are the same as [vue-route-generator options](https://github.com/ktsn/vue-route-generator#references)
+You also need to add a webpack plugin vue-macula-auto-routing provides. The plugin options are the same as [vue-macula-auto-routing options](https://github.com/macula-projects/vue-macula-auto-routing#references)
 
 ```js
 // webpack.config.js
@@ -57,7 +57,7 @@ module.exports = {
 
 * [vue-cli-plugin-macula-auto-routing](https://github.com/macula-projects/vue-cli-plugin-macula-auto-routing): Vue CLI plugin including auto multi pages and layouts resolution.
 * [vue-router-layout](https://github.com/ktsn/vue-router-layout): Lightweight layout resolver for Vue Router.
-* [vue-route-generator](https://github.com/ktsn/vue-route-generator): Low-level utility generating routing which vue-macula-auto-routing using under the hood.
+* [vue-macula-route-generator](https://github.com/macula-projects/vue-macula-route-generator): Low-level utility generating routing which vue-macula-auto-routing using under the hood.
 
 ## License
 

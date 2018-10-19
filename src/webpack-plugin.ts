@@ -3,7 +3,7 @@ import * as fs from 'fs'
 import * as path from 'path'
 import * as fg from 'fast-glob'
 import { Compiler } from 'webpack'
-import { generateRoutes, GenerateConfig } from 'vue-route-generator'
+import { generateRoutes, GenerateConfig } from 'vue-macula-route-generator'
 
 const pluginName = 'VueMaculaAutoRoutingPlugin'
 
@@ -28,8 +28,9 @@ class VueMaculaAutoRoutingPlugin {
       })
 
       pagePaths.forEach(page => {
-        this.options.pages = path.join(this.options.pages, page.split('/')[0], 'views')
-        this.options.importPrefix = path.join('@/modules', page.split('/')[0], 'views/')
+        this.options.moduleName = page.split('/')[0]
+        this.options.pages = path.join(this.options.pages, this.options.moduleName, 'views')
+        this.options.importPrefix = path.join('@/modules', this.options.moduleName, 'views/')
         const code = generateRoutes(this.options)
         const to = path.resolve(__dirname, '../../../src/modules', page.split('/')[0], 'router/routes.js');
   

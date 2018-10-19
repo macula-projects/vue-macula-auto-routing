@@ -1,6 +1,6 @@
 {
   "name": "vue-macula-auto-routing",
-  "version": "0.3.1",
+  "version": "0.3.4",
   "author": "katashin, rain",
   "description": "Generate Vue Router routing automatically for multipage",
   "keywords": [
@@ -70,10 +70,10 @@
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.16",
+    "fast-glob": "^2.2.3",
     "webpack": "^4.16.0"
   },
   "dependencies": {
-    "fast-glob": "^2.2.3",
-    "vue-route-generator": "^0.3.0"
+    "vue-macula-route-generator": "^0.3.3"
   }
 }
