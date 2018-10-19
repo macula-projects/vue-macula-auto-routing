@@ -2,6 +2,8 @@
 
 Generate Vue Router routing automatically for multipages.
 
+forked from ktsn/vue-auto-routing
+
 You may want to use [vue-cli-plugin-macula-auto-routing](https://github.com/macula-projects/vue-cli-plugin-macula-auto-routing) which includes all useful features on routing.
 
 ## Installation
