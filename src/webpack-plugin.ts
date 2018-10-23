@@ -27,9 +27,10 @@ class VueMaculaAutoRoutingPlugin {
         cwd: this.options.pages
       })
 
+      const origPages = this.options.pages
       pagePaths.forEach(page => {
         this.options.moduleName = page.split('/')[0]
-        this.options.pages = path.join(this.options.pages, this.options.moduleName, 'views')
+        this.options.pages = path.join(origPages, this.options.moduleName, 'views')
         this.options.importPrefix = path.join('@/modules', this.options.moduleName, 'views/')
         const code = generateRoutes(this.options)
         const to = path.resolve(__dirname, '../../../src/modules', page.split('/')[0], 'router/routes.js');
